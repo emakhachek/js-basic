@@ -25,34 +25,22 @@ let h = 1n;
 console.log(typeof h); // expected output: bigint
 
 // Task #3
-let objectDemonstration = {
-    name: "Kate",
-    age = 30,
-    sizes: {
-        height: 167,
-        width: 53
-    },
-    "trying to learn js": true,
-};
-objectDemonstration.name = "Max";
-objectDemonstration["trying to learn js"] = false;
-let a = age;
-objectDemonstration[a] = 20; // objectDemonstration = { name : "Max", age : 20, "trying to learn js" : false, ... }
-alert("fullName" in objectDemonstration); //false
-alert(a in objectDemonstration); //true
-
+let a = { name: 'Kate' };
+let b = a;
+b.name = 'Max'; 
+alert(a.name); // 'Max'
 
 // Task #4
 let a = 2;
 console.log(`результат: ${a * 5}`); // результат: 10
 
 // Additional task #1
-let testArray = ['String', { objectKey: 'value' }, true, 58, null, Symbol("id"), undefined, 58n];
+const testArray = ['String', { objectKey: 'value' }, true, 58, null, Symbol("id"), undefined, 58n];
 
 // Additional task #2
-let result = {};
+const result = {};
 for (let i = 0; i < testArray.length; i++) {
-    let currentType = typeof testArray[i];
+    const currentType = typeof testArray[i];
     if (result[currentType] === undefined) {
         result[currentType] = 1
 
