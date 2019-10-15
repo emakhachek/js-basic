@@ -42,7 +42,7 @@ const result = {};
 for (let i = 0; i < testArray.length; i++) {
     const currentType = typeof testArray[i];
     if (result[currentType] === undefined) {
-        result[currentType] = 1
+        result[currentType] = 1;
 
     }
     else {
