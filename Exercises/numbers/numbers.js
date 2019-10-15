@@ -1,19 +1,19 @@
 // Task #2
 function extractNumbers(text) {
-  result = parseInt(text);
+  let result = parseInt(text);
   return result;
 }
 
 // Task #1
-binaryValue = 0b11111111;
-octalValue = 0o377;
-hexadecimalValue = 0xff;
+const binaryValue = 0b11111111;
+const octalValue = 0o377;
+const hexadecimalValue = 0xff;
 
 // Task #4
 let randomValue = Math.floor((Math.random() * 100) + 1);
 
 // Task #3
 let value = 50;
-binaryValue = value.toString(2);
-octalValue = value.toString(8);
-hexadecimalValue = value.toString(16);
+const binaryValue = value.toString(2);
+const octalValue = value.toString(8);
+const hexadecimalValue = value.toString(16);
