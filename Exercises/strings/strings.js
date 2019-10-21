@@ -16,7 +16,7 @@ console.log(`My favorite animal is ${c}`);
 function CapitalizeFirstLetters(text) {
     let temp = '';
     let res = '';
-    for (let i = 0; i < text.length; i++) {
+    for (let i = 0; i < text.length; i += 1) {
         temp += text[i];
         if (text[i] == ' ' || i == text.length - 1) {
             res += temp[0].toUpperCase() + temp.slice(1);
