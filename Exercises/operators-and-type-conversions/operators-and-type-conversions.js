@@ -1,3 +1,7 @@
+// Task #1
+a = 10;
+console.log(parseInt(a + '0'));
+
 // Task #2
 const stringValue = `Amazon annual revenue of US$232.887 billion`;
 let r = new RegExp(/\d+.\d+/);
