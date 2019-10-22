@@ -3,7 +3,7 @@ const a = "\u2764";
 console.log(a);
 
 // Task #2
-const b = "This book costs 100\$";
+const b = "This is a backslash \\";
 console.log(b);
 
 // Task #3
