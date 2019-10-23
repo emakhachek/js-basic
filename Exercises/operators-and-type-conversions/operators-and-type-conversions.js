@@ -5,11 +5,16 @@ console.log(parseInt(a + '0'));
 // Task #2
 const stringValue = `Amazon annual revenue of US$232.887 billion`;
 let r = new RegExp(/\d+.\d+/);
-const annualRevenue = +stringValue.match(r) * 1e9;
-console.log(annualRevenue);
-const monthlyIncome = annualRevenue / 12;
-console.log(Math.round(monthlyIncome));
-  
+let annualRevenue = +stringValue.match(r);
+if (typeof annualRevenue === "number") {
+    console.log(`Annual revenue is: ${annualRevenue *= 1e9}`);
+    const monthlyIncome = annualRevenue / 12;
+    console.log(`Monthly income is: ${Math.round(monthlyIncome)}`);
+}
+else {
+    console.log('annualRevenue is not a number');
+}
+
 // Task #3
 let c = 1;
 console.log(++c);
