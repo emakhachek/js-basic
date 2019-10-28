@@ -13,7 +13,7 @@ const c = 'Cat';
 console.log(`My favorite animal is ${c}`);
 
 // Task #5
-function CapitalizeFirstLetters(text) {
+function сapitalizeFirstLetters(text) {
     let temp = '';
     let res = '';
     for (let i = 0; i < text.length; i += 1) {
@@ -25,4 +25,4 @@ function CapitalizeFirstLetters(text) {
     }
     return res;
 }
-console.log(CapitalizeFirstLetters('erich maria remarque'));
+console.log(сapitalizeFirstLetters('erich maria remarque'));
