@@ -10,7 +10,7 @@ function getMissingComplexityElementCode(password) {
     return 3;
   }
 
-  if (password.length != 8) {
+  if (password.length !== 8) {
     return 0;
   }
 
@@ -25,8 +25,9 @@ function getMissingComplexityElementCode(password) {
   return true;
 }
 
-function getErrorMessage(errorCode) {
+function getErrorMessage() {
   console.log(codeToMissingComplexityElement[errorCode]);
+  return false;
 }
 
 let errorCode = getMissingComplexityElementCode('123456A@');
