@@ -11,8 +11,9 @@ const arrowFunction = (a, b, ...rest) => null;
 
 // Task #2
 function takeMyParametersAmount(a, b, c) {
-  return console.log(takeMyParametersAmount.length);
+  return null;
 }
+console.log(takeMyParametersAmount.length);
 
 // Task #3
 function logPassedParams(...theArgs) {
