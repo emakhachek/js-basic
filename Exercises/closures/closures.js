@@ -4,16 +4,10 @@ const user = {
 };
 
 function greetUser(user, getNameFunc) {
-  return `I am happy to see you ${getNameFunc(user)}`;
+  return getNameFunc(user) ? `I am happy to see you ${getNameFunc(user)}'` : ``;
 }
+const getGreetNameByField = (field) => (function f(user) { return user[field]; });
 
-/**
- * @param field - name of property in object
- */
-const getGreetNameByField = (field) => {
-};
-
-//wrap in console log to check
-greetUser(user, getGreetNameByField('name')); // I am happy to see you Test
-greetUser(user, getGreetNameByField('surname')); // I am happy to see you Testing
-greetUser(user, getGreetNameByField('nickname')); //'
+console.log(greetUser(user, getGreetNameByField('name'))); // I am happy to see you Test
+console.log(greetUser(user, getGreetNameByField('surname'))); // I am happy to see you Testing
+console.log(greetUser(user, getGreetNameByField('nickname'))); //
