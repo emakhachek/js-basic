@@ -20,13 +20,10 @@ let graduate = {
 console.log(defineAge.call(graduate));
 
 // Task 4
-let a = {
-    name: "John",
-}
 let b = {
     name: "Peter",
     greeting: function () {
-        console.log(`Hi, ${a.name}`);
+        console.log(`Hi, ${this.name}`);
     }
 }
 b.greeting();
