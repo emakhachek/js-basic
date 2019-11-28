@@ -5,7 +5,7 @@ console.log(isElementPresent(array, 3));
 
 // Task #2
 const array = [2, 4];
-const isArrayEven = (ar) => !ar.some(item => item % 2 === 1).length;
+const isArrayEven = (ar) => !ar.some(item => item % 2 === 1);
 console.log(isArrayEven(array));
 
 // Task #3
