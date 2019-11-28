@@ -20,10 +20,13 @@ let graduate = {
 console.log(defineAge.call(graduate));
 
 // Task 4
+window.a = {
+    name: "John",
+}
 let b = {
     name: "Peter",
-    greeting: function () {
-        console.log(`Hi, ${this.name}`);
+    greeting: () => {
+        console.log(`Hi, ${this.a.name}`);
     }
 }
 b.greeting();
