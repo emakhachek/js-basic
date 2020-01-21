@@ -2,45 +2,42 @@ const wait = time => new Promise((resolve) => setTimeout(resolve, time));
 
 const fakeAjax = async () => {
     return new Promise((resolve, reject) => {
-        if (Math.random() > 0.1) {
-            resolve(console.log('200'))
+        if (Math.random() > 0.5) {
+            resolve('Pass');
         } else {
-            reject(new Error('Server error'));
+            reject();
         }
     });
 };
 
 (async () => {
     try {
-        await Promise.all([
+        const resultParallel = await Promise.all([
             fakeAjax().catch(err => {
-                console.log(err);
-                return null;
+                return 'Fail';
             }),
             fakeAjax().catch(err => {
-                console.log(err);
-                return null;
+                return 'Fail';
             }),
             fakeAjax().catch(err => {
-                console.log(err);
-                return null;
+                return 'Fail';
             })
         ]);
+        console.log(resultParallel);
     } catch (err) {
         console.log(err);
     }
 })();
 
-console.log('-----------');
-
 (async () => {
     let i = 0;
     while (i < 3) {
         try {
-            await fakeAjax();
+            let resultSerial = await fakeAjax();
             await wait(1000);
+            console.log(resultSerial)
         } catch (err) {
-            console.log(err);
+            console.log('Fail');
         }
         i++;
     }
