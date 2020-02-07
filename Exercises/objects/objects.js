@@ -32,14 +32,8 @@ objectWithDefinedProperties[person] = 'Kate';
 console.log(objectWithDefinedProperties);
 
 // Additional task:
-const keyArray = ["name", "age", "happy"];
-const valueArray = ["Andy", 31, true];
+const keys = ["name", "age", "happy"];
+const values = ["Andy", 31, true];
 let obj = {};
-for (let i = 0; i < keyArray.length; i++) {
-    for (let j = 0; j < valueArray.length; j++) {
-        if (i === j) {
-            obj[keyArray[i]] = valueArray[j];
-        }
-    }
-}
+keys.forEach((item, index) => obj[item] = values[index]);
 console.log(obj);
